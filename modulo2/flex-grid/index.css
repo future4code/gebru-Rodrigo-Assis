@@ -45,14 +45,6 @@ main{
 }
 
 
-footer {
-    display: flex;
-    justify-content: center;
-    background: mediumvioletred;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    }
+
 
 
