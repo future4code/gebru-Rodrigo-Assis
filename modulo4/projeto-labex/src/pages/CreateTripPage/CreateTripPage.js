@@ -4,15 +4,15 @@ import { goBack } from "../../routes/coordinator";
 
 
 
-const AdminHomePage = () => {
+const CreateTripPage = () => {
     
     const navigate = useNavigate()
     
-    
+  
     return (
         <div> 
             <h1>
-            ADM PAGE LOGIN
+            PAGINA DE CRIAR VIAGNES
             </h1>
             
             <button onClick={()=>goBack(navigate)}>VOLTAR</button>
@@ -20,4 +20,4 @@ const AdminHomePage = () => {
     )
 }
 
-export default AdminHomePage;
+export default CreateTripPage;
