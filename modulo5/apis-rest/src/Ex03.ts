@@ -2,18 +2,18 @@ import { Request,Response } from "express"
 import { users } from "./Ex01";
 
 
-export const filtroType = (req:Request, res:Response) => {
+export const filtroNome = (req:Request, res:Response) => {
     
     let errorCode = 500;
     try {
-        const type = req.query.type as string
+        const nome = req.query.name as string
         errorCode = 422
-        if (!type)
+        if (!nome)
         {
             throw new Error ("Digite novamente!!")
         }
-        const filtro = users.filter(usuario => usuario.type.toLowerCase() === type.toLowerCase())
-        if (filtro.length)
+        const filtro = users.filter(usuario => usuario.name.toLowerCase() === nome.toLowerCase())
+        if (!filtro.length)
         {
         errorCode = 404
         }
@@ -23,5 +23,4 @@ res.send(filtro)
     {
 res.status(errorCode).send(error.menssage)
     }
-
 }

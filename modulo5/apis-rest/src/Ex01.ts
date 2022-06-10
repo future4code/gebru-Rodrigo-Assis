@@ -17,7 +17,7 @@ type User = {
 }
 
 
-let users:User[] = [
+export let users:User[] = [
     {
         id: 1,
         name: "Alice",
