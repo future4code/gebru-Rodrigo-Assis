@@ -1,0 +1,77 @@
+### Exercício 1
+a) 
+
+VARCHAR - String com no máximo N caracteres que é representado dentro dos ()
+DATE - Representa data (YYYY-MM-DD)
+NOT NULL - Uma restrição que obriga uma coluna a não aceitar valores NULL
+PRIMARY KEY - Uma restrição que identifica exclusivamente cada registro em uma tabela de banco de dados
+
+b) Mostra o database e as tabelas criadas
+
+c) Descreveu todas as colunas da tabela criada
+
+### Exercício 2
+
+a) A query é:
+
+```
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "002", 
+  "Glória Pires",
+  1200000,
+  "1963-08-23", 
+  "female"
+);
+```
+b)
+
+Código de erro: 1062. Entrada duplicada '002' para chave 'PRIMARY'
+
+Não é possivel adicionar dois ids iguais pois esta como primaykey.
+
+c)ok
+d)ok
+e)ok
+
+
+### Exercício 3
+
+
+
+a) 
+
+```
+SELECT id, name, salary, birth_date, gender from Actor 
+WHERE gender = "female"
+```
+
+b)
+
+```
+SELECT salary from Actor 
+WHERE name = "Tony Ramos"
+```
+
+c)
+
+```
+SELECT id, name, salary, birth_date, gender from Actor 
+WHERE gender = "invalid"
+```
+
+Retornou uma tabela com as colunas NULL
+
+d)
+
+```
+SELECT id, name, salary from Actor 
+WHERE salary <= 500000
+```
+
+e)
+
+```
+SELECT id, name from Actor 
+WHERE id = "002"
+```
