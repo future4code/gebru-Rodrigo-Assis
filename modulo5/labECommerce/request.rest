@@ -1,14 +1,41 @@
-// padrão
-GET http://localhost:3003/
+// Todos Usuarios 
+GET http://localhost:3003/users
 ###
-// filtro
-GET http://localhost:3003/
+// Todos Produtos
+GET http://localhost:3003/products
 ###
-// ordenação
-GET http://localhost:3003/
+// Todos Compras
+GET http://localhost:3003/users/:user_id/purchases
 ###
-// paginação
-GET http://localhost:3003/
+// Cria usuario
+POST http://localhost:3003/users
+Content-Type: application/json
+{  
+     "name":"Pedro",
+     "email":"pedro@labenu.com",
+     "password":"senha"
+ }
 ###
-// todos juntos
-GET http://localhost:3003/
+// Cria produtos
+POST http://localhost:3003/products
+
+Content-Type: application/json
+
+{  
+     "name":"leite",
+     "price":"15",
+     "image_url":"https://static.paodeacucar.com/img/uploads/1/194/531194.jpg"
+ }
+
+###
+// Adiciona o produto comprado
+
+POST http://localhost:3003/purchases
+Content-Type: application/json
+
+{  
+           "user_id":"1",
+           "product_id":"1",
+           "quantity":2
+
+       }

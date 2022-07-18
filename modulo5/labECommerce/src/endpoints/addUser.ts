@@ -1,23 +1,24 @@
 
 import { Request , Response } from "express"
-import { connection } from "../data/connection"
-import { user } from "../types"
+import { insertUser } from "../data/sqlFunctions"
 
 
 
-/* export const addUser = async (req:Request, res:Response) => {
+
+ export const addUser = async (req:Request, res:Response) => {
     
-    
-    const result = await connection ("labecommerce_users")
-     
-    
-    const {name, email, password} = req.body 
-    
+    try {
+       
+       const name = req.body.name
+       const email = req.body.email
+       const password = req.body.password
+       const id = Math.random().toString()
+       
+       insertUser(id,name, email, password)
 
-    .insert labecommerce_users ( {name, email, password })
-    .values (req.body)
-
-
-
-    return result
-    }  */
+res.status(200).send("User create")
+    } catch (error:any) {
+        res.status(400).send(error.message)
+    }
+   
+} 
