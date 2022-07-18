@@ -1,4 +1,4 @@
-import { connection } from "./connection"
+/* import { connection } from "./connection"
 import users from "./users.json"
 import recipes from "./recipes.json"
 
@@ -42,4 +42,4 @@ const closeConnection = () => { connection.destroy() }
 createTables()
    .then(insertUsers)
    .then(insertRecipes)
-   .finally(closeConnection)
+   .finally(closeConnection) */
